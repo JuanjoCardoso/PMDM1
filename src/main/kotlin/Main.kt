@@ -4,8 +4,9 @@ fun main() {
     assignReadersToBooks()
     printStringLength("This is a test")
     printStringLength(null)
-    exercise1()
-    exercise2()
+    //exercise1()
+    //exercise2()
+    exercise3()
     //println("Concatenation: " + concatenate("hello", null))
 }
 
@@ -58,7 +59,48 @@ fun exercise2() {
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
 
+fun exercise3(){
+    var num=1
+    var aux=0
+    var lett=""
 
+    println("Please, enter your NIF number (without letter)")
+    val numStr = readLine()
+    num = numStr!!.toInt()
+    if (num > 0 && num < 100000000 ){
+        aux=num%23
+        when (aux){
+            0 -> lett="T"
+            1 -> lett="R"
+            2 -> lett="W"
+            3 -> lett="A"
+            4 -> lett="G"
+            5 -> lett="M"
+            6 -> lett="Y"
+            7 -> lett="F"
+            8 -> lett="P"
+            9 -> lett="D"
+            10 -> lett="X"
+            11 -> lett="B"
+            12 -> lett="N"
+            13 -> lett="J"
+            14 -> lett="Z"
+            15 -> lett="S"
+            16 -> lett="Q"
+            17 -> lett="V"
+            18 -> lett="H"
+            19 -> lett="L"
+            20 -> lett="C"
+            21 -> lett="K"
+            22 -> lett="E"
+        }
+    }
+
+    println("Your NIF with number: ")
+    print(num)
+    println(lett)
+
+}
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
 // (simplification 2)
