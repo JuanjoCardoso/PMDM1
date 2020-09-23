@@ -34,6 +34,20 @@ fun exercise2() {
             // https://kotlinlang.org/docs/reference/control-flow.html
             // take into account that some months have 30, others 31 and one 28 or 29.
             // Invoke the function from main()
+            when (month){
+                1 -> println("January")
+                2 -> println("February")
+                3 -> println("March")
+                4 -> println("April")
+                5 -> println("May")
+                6 -> println("June")
+                7 -> println("July")
+                8 -> println("August")
+                9 -> println("September")
+                10 -> println("October")
+                11 -> println("November")
+                12 -> println("December")
+            }
         }
     }
 }
@@ -43,6 +57,8 @@ fun exercise2() {
 // that represents the corresponding NIF (number + letter)
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
+
+
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
 // (simplification 2)
