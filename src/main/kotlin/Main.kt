@@ -5,6 +5,7 @@ fun main() {
     printStringLength("This is a test")
     printStringLength(null)
     exercise1()
+    exercise2()
     //println("Concatenation: " + concatenate("hello", null))
 }
 
@@ -21,7 +22,7 @@ fun exercise1(){
 }
 
 // TODO: 2.- Uncomment this function:
-/* fun exercise2() {
+fun exercise2() {
     var month = 1
     while(month != 0) {
         println("Enter the number of the month (0 to finish)")
@@ -35,7 +36,7 @@ fun exercise1(){
             // Invoke the function from main()
         }
     }
-} */
+}
 
 // TODO: 3 Write a function called exercise3()
 // that accepts a  number and returns a String
