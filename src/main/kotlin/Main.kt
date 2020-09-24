@@ -6,7 +6,7 @@ fun main() {
     printStringLength(null)
     //exercise1()
     //exercise2()
-    exercise3()
+    //exercise3()
     //println("Concatenation: " + concatenate("hello", null))
 }
 
@@ -106,10 +106,11 @@ fun exercise3(){
 // (simplification 2)
 // https://developer.android.com/kotlin/learn#simplifying
 // Note: You can remove the : Int in the declaration
-fun countAs(str: String): Int {
-    val count = str.count { c -> c == 'a' }
-    return count
-}
+fun countAs(str: String) = str.count { c -> c == 'a' }
+//{
+    //val count = str.count { c -> c == 'a' }
+    //return count
+//}
 
 
 fun stringMapper(str: String, mapper: (String) -> Int): Int {
