@@ -1,14 +1,24 @@
 fun main() {
     println("Hello World.")
-    println("number of a's = " + countAs("Mary got married"))
     assignReadersToBooks()
+
+    exercise1()
+
+    exercise2()
+
+    exercise3()
+
+    println("number of a's = " + countAs("Mary got married"))
+
+    exercise5()
+
     printStringLength("This is a test")
     printStringLength(null)
-    //exercise1()
-    //exercise2()
-    //exercise3()
-    //exercise5()
-    //println("Concatenation: " + concatenate("hello", null))
+
+    println("Concatenation: " + concatenate("hello", null))
+    println("Concatenation: " + concatenate(null, "world"))
+    println("Concatenation: " + concatenate(null, null))
+    println("Concatenation: " + concatenate("hello", "world"))
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -166,3 +176,20 @@ fun printStringLength(string: String?) {
 // If a String is null, convert it to “”.
 // This is the invocation:
 // println("Concatenation: " + concatenate("hello", null))
+fun concatenate(string1: String?, string2: String?): String {
+    val a:String
+    if (string1 != null) {
+        if (string2 != null) {
+            a= string1+string2
+        }else{
+            a= string1+""
+        }
+    } else {
+        if (string2 != null) {
+            a= "" + string2
+        } else {
+            a= ""+""
+        }
+    }
+    return a
+}
