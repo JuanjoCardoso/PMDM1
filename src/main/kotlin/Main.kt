@@ -7,6 +7,7 @@ fun main() {
     //exercise1()
     //exercise2()
     //exercise3()
+    exercise5()
     //println("Concatenation: " + concatenate("hello", null))
 }
 
@@ -121,6 +122,16 @@ fun stringMapper(str: String, mapper: (String) -> Int): Int {
 // The first one with a function that returns the number of characters
 // and the second one with a function that returns the number of a’s.
 // Print its results.
+
+fun exercise5(){
+    println("Please, write a word")
+    val word = readLine()
+    print("Number of characters of your word: ")
+    println(stringMapper(word.toString(),{ input -> input.length}))
+    println("")
+    print("Number of A's of the word: ")
+    println(countAs(word.toString()))
+}
 
 
 data class Reader(val name: String, val age: Int)
