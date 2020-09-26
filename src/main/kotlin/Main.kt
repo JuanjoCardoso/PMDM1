@@ -6,7 +6,7 @@ fun main() {
 
     exercise2()
 
-    exercise3()
+    System.out.println("NIF: "+exercise3("73398626"))
 
     println("number of a's = " + countAs("Mary got married"))
 
@@ -47,18 +47,18 @@ fun exercise2() {
             // take into account that some months have 30, others 31 and one 28 or 29.
             // Invoke the function from main()
             when (month){
-                1 -> println("January")
-                2 -> println("February")
-                3 -> println("March")
-                4 -> println("April")
-                5 -> println("May")
-                6 -> println("June")
-                7 -> println("July")
-                8 -> println("August")
-                9 -> println("September")
-                10 -> println("October")
-                11 -> println("November")
-                12 -> println("December")
+                1 -> println("January has 31 days")
+                2 -> println("February has 28 or 29 days")
+                3 -> println("March has 31 days")
+                4 -> println("April has 30 days")
+                5 -> println("May has 31 days")
+                6 -> println("June has 30 days")
+                7 -> println("July has 31 days")
+                8 -> println("August has 31 days")
+                9 -> println("September has 30 days")
+                10 -> println("October has 31 days")
+                11 -> println("November has 30 days")
+                12 -> println("December has 31 days")
             }
         }
     }
@@ -70,47 +70,19 @@ fun exercise2() {
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
 
-fun exercise3(){
+fun exercise3(numStr:String): String{
     var num=1
     var aux=0
+    val letters = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E")
     var lett=""
 
-    println("Please, enter your NIF number (without letter)")
-    val numStr = readLine()
     num = numStr!!.toInt()
     if (num > 0 && num < 100000000 ){
         aux=num%23
-        when (aux){
-            0 -> lett="T"
-            1 -> lett="R"
-            2 -> lett="W"
-            3 -> lett="A"
-            4 -> lett="G"
-            5 -> lett="M"
-            6 -> lett="Y"
-            7 -> lett="F"
-            8 -> lett="P"
-            9 -> lett="D"
-            10 -> lett="X"
-            11 -> lett="B"
-            12 -> lett="N"
-            13 -> lett="J"
-            14 -> lett="Z"
-            15 -> lett="S"
-            16 -> lett="Q"
-            17 -> lett="V"
-            18 -> lett="H"
-            19 -> lett="L"
-            20 -> lett="C"
-            21 -> lett="K"
-            22 -> lett="E"
-        }
+        lett=letters[aux]
     }
-
-    println("Your NIF with number: ")
-    print(num)
-    println(lett)
-
+    val nif=num.toString()+lett
+    return(nif)
 }
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
@@ -140,7 +112,8 @@ fun exercise5(){
     println(stringMapper(word.toString(),{ input -> input.length}))
     println("")
     print("Number of A's of the word: ")
-    println(countAs(word.toString()))
+    println(stringMapper(word.toString(),{ input -> countAs(input)}))
+    println("")
 }
 
 
@@ -165,7 +138,7 @@ fun assignReadersToBooks() {
 fun printStringLength(string: String?) {
     print("The length of the string is: ")
     if (string != null) {
-        println(string.length)
+        println("length = " + (string?.length ?: 0))
     }else {
         println("0")
     }
