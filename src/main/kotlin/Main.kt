@@ -141,19 +141,5 @@ fun printStringLength(string: String?) {
 // This is the invocation:
 // println("Concatenation: " + concatenate("hello", null))
 fun concatenate(string1: String?, string2: String?): String {
-    val a:String
-    if (string1 != null) {
-        if (string2 != null) {
-            a= string1+string2
-        }else{
-            a= string1+""
-        }
-    } else {
-        if (string2 != null) {
-            a= "" + string2
-        } else {
-            a= ""+""
-        }
-    }
-    return a
+    return (string1 ?: "") + (string2 ?: "")
 }
