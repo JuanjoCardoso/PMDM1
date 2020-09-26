@@ -47,18 +47,9 @@ fun exercise2() {
             // take into account that some months have 30, others 31 and one 28 or 29.
             // Invoke the function from main()
             when (month){
-                1 -> println("January has 31 days")
-                2 -> println("February has 28 or 29 days")
-                3 -> println("March has 31 days")
-                4 -> println("April has 30 days")
-                5 -> println("May has 31 days")
-                6 -> println("June has 30 days")
-                7 -> println("July has 31 days")
-                8 -> println("August has 31 days")
-                9 -> println("September has 30 days")
-                10 -> println("October has 31 days")
-                11 -> println("November has 30 days")
-                12 -> println("December has 31 days")
+                1, 3, 5, 7, 8, 10, 12 -> println("31 days")
+                2 -> println("28 days")
+                4, 6, 9, 11 -> println("30 days")
             }
         }
     }
